@@ -1,6 +1,7 @@
 # Legal SaaS Lawyer Portal
 
 A web-based portal for lawyers to manage clients, matters, and legal cases.
+This react app is designed to be used with this api: https://github.com/andrew-turner-dev/CustomerAndMatterManagementAPI
 
 ## Features
 
