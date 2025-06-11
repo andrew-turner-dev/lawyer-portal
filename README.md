@@ -3,14 +3,16 @@
 A web-based portal for lawyers to manage clients, matters, and legal cases.
 This react app is designed to be used with this api: https://github.com/andrew-turner-dev/CustomerAndMatterManagementAPI
 
+## A quick note about TailWind
+I have never worked with tailwind css before. However, it was specified in the prompt for the front end. I did my best to get it to fully work and give the front end a nicer look but was unsuccessful within the timeframe. 
+
 ## Features
 
 - User authentication (login/signup) with admin capabilities
 - Client management
 - Matter/case tracking
 - Secure API integration
-- Responsive design with Tailwind CSS
-  -Note: I did my best to get Tailwind CSS to work with this project and I could not. 
+- Responsive design with Tailwind CSS (see note)
 
 ## Prerequisites
 
@@ -80,3 +82,9 @@ The application uses JWT token-based authentication. Tokens are stored in localS
 - Built with Tailwind CSS
 - Custom components follow consistent styling patterns
 - Responsive design for all screen sizes
+
+  ## TODO
+  1. Get a better understanding of UI wanted
+  2. Add ability to edit customer and matter data
+  3. Add ability to manage firms
+  4. Role based operations(admin and non admin)
