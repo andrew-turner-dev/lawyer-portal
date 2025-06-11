@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function CustomerList() {
   const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCustomers = async () => {
@@ -57,12 +58,12 @@ export default function CustomerList() {
       <div className="py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-semibold">My Customers</h1>
-          <Link
-            to="/customers/new"
+          <button
+            onClick={() => navigate('/customers/new')}
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
           >
             Add Customer
-          </Link>
+          </button>
         </div>
         
         {customers.length === 0 ? (
