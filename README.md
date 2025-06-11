@@ -36,6 +36,7 @@ Create a `.env` file in the root directory:
 ```env
 REACT_APP_API_URL=https://localhost:7291
 ```
+Or use .env file in the repo. It is included for ease of use.
 
 4. Start the development server:
 ```bash
