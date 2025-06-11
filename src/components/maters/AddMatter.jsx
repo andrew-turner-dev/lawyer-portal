@@ -19,7 +19,7 @@ export default function AddMatter() {
     try {
       const token = localStorage.getItem('token');
       console.log('Adding matter for customer:', customerId, 'with data:', matter);
-      await axios.post(`https://localhost:7291/api/customers/${customerId}/matters`, matter, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/customers/${customerId}/matters`, matter, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

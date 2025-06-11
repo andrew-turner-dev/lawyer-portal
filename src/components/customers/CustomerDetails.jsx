@@ -15,7 +15,7 @@ export default function CustomerDetails() {
       try {
         const token = localStorage.getItem('token');
         // First fetch customer details
-        const customerResponse = await axios.get(`https://localhost:7291/api/customers/${id}`, {
+        const customerResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/customers/${id}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export default function CustomerDetails() {
 
         // Then try to fetch matters, but handle case where there are none
         try {
-          const mattersResponse = await axios.get(`https://localhost:7291/api/customers/${id}/matters`, {
+          const mattersResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/customers/${id}/matters`, {
             headers: {
               'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json'

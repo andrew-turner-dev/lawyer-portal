@@ -11,7 +11,7 @@ export default function CustomerList() {
     const fetchCustomers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://localhost:7291/api/customers', {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/customers`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'

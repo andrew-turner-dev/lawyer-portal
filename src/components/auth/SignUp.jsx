@@ -26,7 +26,7 @@ export default function Signup() {
 
     setLoading(true);
     try {
-      const response = await axios.post('https://localhost:7291/api/auth/signup', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, {
         loginEmail: formData.loginEmail,
         password: formData.password,
         firstName: formData.firstName,

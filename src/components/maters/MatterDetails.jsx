@@ -16,7 +16,7 @@ export default function MatterDetails() {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          `https://localhost:7291/api/customers/${customerId}/matters/${matterId}`,
+          `${process.env.REACT_APP_API_URL}/api/customers/${customerId}/matters/${matterId}`,
           {
             headers: {
               'Authorization': `Bearer ${token}`,

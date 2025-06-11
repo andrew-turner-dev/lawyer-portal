@@ -17,7 +17,7 @@ export default function AddCustomer() {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      await axios.post('https://localhost:7291/api/customers', customer, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/customers`, customer, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
