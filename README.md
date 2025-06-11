@@ -43,7 +43,7 @@ Or use .env file in the repo. It is included for ease of use.
 
 4. Start the development server:
 ```bash
-npm start
+npm run start
 ```
 
 The application will be available at http://localhost:3000
@@ -64,7 +64,7 @@ lawyer-portal/
 
 ## Available Scripts
 
-- `npm start` - Runs the app in development mode
+- `npm run start` - Runs the app in development mode
 - `npm test` - Launches the test runner
 - `npm run build` - Builds the app for production
 - `npm run eject` - Ejects from Create React App
